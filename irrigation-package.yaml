@@ -1,0 +1,221 @@
+#########################################################
+### IRRIGATION
+#########################################################
+
+input_text:
+  ##Time Schedule
+  irrigation_zone_1_times:
+    name: Time Schedule - Zone 1
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:00
+
+  ##Day Schedule
+  irrigation_zone_1_days:
+    name: Day Schedule - Zone 1
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+    
+  ##Time Schedule
+  irrigation_zone_2_times:
+    name: Time Schedule - Zone 2
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:10
+
+  ##Day Schedule
+  irrigation_zone_2_days:
+    name: Day Schedule - Zone 2
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+    
+  ##Time Schedule
+  irrigation_zone_3_times:
+    name: Time Schedule - Zone 3
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:20
+
+  ##Day Schedule
+  irrigation_zone_3_days:
+    name: Day Schedule - Zone 3
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+    
+  ##Time Schedule
+  irrigation_zone_4_times:
+    name: Time Schedule - Zone 4
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:30
+
+  ##Day Schedule
+  irrigation_zone_4_days:
+    name: Day Schedule - Zone 4
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+    
+  ##Time Schedule
+  irrigation_zone_5_times:
+    name: Time Schedule - Zone 5
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:40
+
+  ##Day Schedule
+  irrigation_zone_5_days:
+    name: Day Schedule - Zone 5
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+
+  ##Time Schedule
+  irrigation_zone_6_times:
+    name: Time Schedule - Zone 6
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 18:50
+
+  ##Day Schedule
+  irrigation_zone_6_days:
+    name: Day Schedule - Zone 6
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon
+    
+  ##Time Schedule
+  irrigation_zone_7_times:
+    name: Time Schedule - Zone 7
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 19:00
+
+  ##Day Schedule
+  irrigation_zone_7_days:
+    name: Day Schedule - Zone 7
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon  
+
+  ##Time Schedule
+  irrigation_zone_8_times:
+    name: Time Schedule - Zone 8
+    icon: mdi:chart-timeline
+    mode: text
+    initial: 19:10
+
+  ##Day Schedule
+  irrigation_zone_8_days:
+    name: Day Schedule - Zone 8
+    icon: mdi:calendar-week
+    mode: text
+    initial: Mon    
+############################
+# input_number irrigation
+############################
+
+input_number:
+  ##Duration
+  irrigation_zone_1_duration:
+    name: Duration - Zone 1
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+     
+  ##Duration
+  irrigation_zone_2_duration:
+    name: Duration - Zone 2
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5 
+
+  ##Duration
+  irrigation_zone_3_duration:
+    name: Duration - Zone 3
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+
+  ##Duration
+  irrigation_zone_4_duration:
+    name: Duration - Zone 4
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+
+  ##Duration
+  irrigation_zone_5_duration:
+    name: Duration - Zone 5
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+
+  ##Duration
+  irrigation_zone_6_duration:
+    name: Duration - Zone 6
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+    
+  ##Duration
+  irrigation_zone_7_duration:
+    name: Duration - Zone 7
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5
+    
+  ##Duration
+  irrigation_zone_8_duration:
+    name: Duration - Zone 8
+    min: 0
+    max: 30
+    step: 1
+    mode: slider
+    icon: mdi:timer
+    initial: 5    
+### Optional offline notifications. Uncomment this automation if you'd like an notification 
+### should the device be disconnected from the network for two hours!
+# automation:
+#   # Warn me if the system ever goes offline for more than two hours!
+#   - alias: irrigation_system_offline
+#     initial_state: true
+#     trigger:
+#       - platform: state
+#         entity_id: binary_sensor.irrigation_controller_status
+#         to: 'off'
+#         for: '02:00:00'
+#     action:
+#       - service: persistent_notification.create
+#         data:
+#           title: "Irrigation System Offline"
+#           message: "The Irrigation System has been offline for 2 hours!"
+#           notification_id: "offline"
+#       - service: notify.mobile_app_iphone_brian
+#         data:
+#           title: "Irrigation System Offline"
+#           message: "The Irrigation System has been offline for 2 hours"   
