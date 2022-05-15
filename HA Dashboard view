@@ -1,0 +1,409 @@
+title: Watering
+views:
+  - title: Irrigation Switch
+    path: irrigation switch
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: button
+            tap_action:
+              action: toggle
+            entity: input_boolean.stop_irrigation_automation
+            show_state: true
+            name: Stop Irrigation Automation Schedule
+          - type: button
+            tap_action:
+              action: toggle
+            entity: switch.stop_all_zones
+            show_state: true
+            hold_action:
+              action: none
+            name: Stop All Irrigation Zones
+          - type: entities
+            entities:
+              - entity: input_boolean.stop_irrigation_automation
+                secondary_info: last-changed
+                icon: mdi:flower-tulip
+                name: Stop Automation Schedule
+              - entity: switch.stop_all_zones
+                name: Stop All Zones
+              - entity: switch.irrigation_zone_1
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_2
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_3
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_4
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_5
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_6
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_7
+                secondary_info: last-updated
+              - entity: switch.irrigation_zone_8
+                secondary_info: last-updated
+            state_color: true
+            show_header_toggle: false
+            title: Irrigation Status
+  - title: Irrigation
+    path: irrigation
+    panel: true
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 1<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_1
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_1
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_1
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_1
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_1
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_1
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_1
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 2<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_2
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_2
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_2
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_2
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_2
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_2
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_2
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 3<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_3
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_3
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_3
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_3
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_3
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_3
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_3
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 4<b><center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_4
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_4
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_4
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_4
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_4
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_4
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_4
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 5<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_5
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_5
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_5
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_5
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_5
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_5
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_5
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 6<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_6
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_6
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_6
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_6
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_6
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_6
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_6
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 7<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_7
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_7
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_7
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_7
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_7
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_7
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_7
+                hours_to_show: 24
+                refresh_interval: 0
+          - type: vertical-stack
+            cards:
+              - type: markdown
+                content: |-
+                  <center><b>Zone 8<b></center>
+
+                  ---
+              - type: entities
+                entities:
+                  - entity: switch.irrigation_zone_8
+                    secondary_info: last-changed
+                    name: Watering
+                state_color: true
+              - type: entities
+                entities:
+                  - entity: sensor.day_zone_8
+                    name: Day
+                    icon: mdi:calendar-month
+                  - entity: sensor.schedule_zone_8
+                    name: Time
+                    icon: mdi:timetable
+                  - entity: sensor.irrigation_duration_zone_8
+                    name: Duration
+                title: Schedule
+              - type: entities
+                entities:
+                  - entity: sensor.remaining_time_zone_8
+                    name: Remaining Time
+                  - entity: sensor.next_irrigation_zone_8
+                    name: Next Irrigation
+                show_header_toggle: false
+                state_color: true
+              - type: history-graph
+                entities:
+                  - entity: switch.irrigation_zone_8
+                hours_to_show: 24
+                refresh_interval: 0
+        square: false
+  - title: Irrigation Configuration
+    path: irrigation-configuration
+    panel: true
+    badges: []
+    cards:
+      - type: grid
+        cards:
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_1_days
+              - input_text.irrigation_zone_1_times
+              - input_number.irrigation_zone_1_duration
+            title: Irrigation - Zone 1
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_2_days
+              - input_text.irrigation_zone_2_times
+              - input_number.irrigation_zone_2_duration
+            title: Irrigation - Zone 2
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_3_days
+              - input_text.irrigation_zone_3_times
+              - input_number.irrigation_zone_3_duration
+            title: Irrigation - Zone 3
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_4_days
+              - input_text.irrigation_zone_4_times
+              - input_number.irrigation_zone_4_duration
+            title: Irrigation - Zone 4
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_5_days
+              - input_text.irrigation_zone_5_times
+              - input_number.irrigation_zone_5_duration
+            title: Irrigation - Zone 5
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_6_days
+              - input_text.irrigation_zone_6_times
+              - input_number.irrigation_zone_6_duration
+            title: Irrigation - Zone 6
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_7_days
+              - input_text.irrigation_zone_7_times
+              - input_number.irrigation_zone_7_duration
+            title: Irrigation - Zone 7
+          - type: entities
+            entities:
+              - input_text.irrigation_zone_8_days
+              - input_text.irrigation_zone_8_times
+              - input_number.irrigation_zone_8_duration
+            title: Irrigation - Zone 8
+        square: false
